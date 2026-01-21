@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Priyanka 💝</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Pacifico&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #ffd6e8 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-heart {
+            position: absolute;
+            font-size: 20px;
+            opacity: 0;
+            animation: floatUp 12s infinite ease-in;
+            will-change: transform;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 40px;
+            padding: 70px 50px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+            margin-bottom: 40px;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 4.5em;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 50%, #ffc1cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            font-weight: 300;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-kawaii {
+            width: 280px;
+            height: 280px;
+            margin: 40px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #ff6b9d, #c06c84, #ffc1cc) border-box;
+            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.4);
+            animation: floatBounce 4s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes floatBounce {
+            0%, 100% { 
+                transform: translateY(0);
+            }
+            50% { 
+                transform: translateY(-15px);
+            }
+        }
+
+        .main-kawaii img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 30px;
+            padding: 45px;
+            margin: 35px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.3em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .card p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.9;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .reveal-btn {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 50%, #ffc1cc 100%);
+            color: white;
+            border: none;
+            padding: 20px 60px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+            position: relative;
+            overflow: hidden;
+            margin: 20px 10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .reveal-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 107, 157, 0.6);
+        }
+
+        .reveal-btn:active {
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        .reveal-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hidden-content {
+            display: none;
+            background: linear-gradient(135deg, #fff5f9 0%, #ffe5f0 50%, #fff0f6 100%);
+            border-radius: 25px;
+            padding: 40px;
+            margin-top: 30px;
+            border: 3px dashed #ff69b4;
+            animation: fadeInDown 0.5s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .kawaii-gif {
+            width: 180px;
+            height: 180px;
+            margin: 25px auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border: 4px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .kawaii-gif:hover {
+            transform: scale(1.05);
+        }
+
+        .kawaii-gif img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .reason-item {
+            background: linear-gradient(135deg, #fff0f6 0%, #ffe5ee 100%);
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 6px solid #ff69b4;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-item::before {
+            content: '💖';
+            font-size: 1.8em;
+            margin-right: 12px;
+            display: inline-block;
+        }
+
+        .reason-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 12px 35px rgba(255, 105, 180, 0.3);
+        }
+
+        .car-section {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #90caf9 100%);
+            border-radius: 35px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(33, 150, 243, 0.3);
+            border: 4px solid rgba(33, 150, 243, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .car-section h2 {
+            background: linear-gradient(135deg, #0d47a1 0%, #1976d2 50%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.8em;
+            margin-bottom: 30px;
+        }
+
+        .promise-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 50%, #ffe082 100%);
+            border-radius: 35px;
+            padding: 50px;
+            margin: 40px 0;
+            border: 5px solid #ffa726;
+            box-shadow: 0 25px 60px rgba(255, 152, 0, 0.4);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promise-box h2 {
+            background: linear-gradient(135deg, #e65100 0%, #ff6f00 50%, #ffa726 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-box p {
+            font-size: 1.35em;
+            line-height: 2;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sparkles {
+            font-size: 3em;
+            margin: 40px 0;
+        }
+
+        .quote-card {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 50%, #ce93d8 100%);
+            border-radius: 30px;
+            padding: 45px;
+            margin: 40px 0;
+            border-left: 8px solid #9c27b0;
+            font-style: italic;
+            font-size: 1.4em;
+            color: #4a148c;
+            box-shadow: 0 15px 40px rgba(156, 39, 176, 0.3);
+            position: relative;
+            line-height: 1.9;
+        }
+
+        .quote-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4em;
+            color: rgba(156, 39, 176, 0.2);
+            font-family: Georgia, serif;
+        }
+
+        .final-message {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 40px;
+            padding: 60px 50px;
+            text-align: center;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+            border: 4px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #ff6b9d, #ffc1cc) border-box;
+            position: relative;
+        }
+
+        .final-message h2 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3em; }
+            .card { padding: 30px; }
+            .reasons-grid { grid-template-columns: 1fr; }
+            .hero { padding: 50px 30px; }
+            .main-kawaii { width: 220px; height: 220px; }
+            .kawaii-gif { width: 150px; height: 150px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-bg" id="heartsContainer"></div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Hey Priyanka 💝</h1>
+            <p class="subtitle">Something beautiful, just for you</p>
+            
+            <div class="main-kawaii">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyMWN1M2gzZ2RsZzBueXc5OWxpZ3RvYjlpcWhwMjZsbHkzZHE0bGxqdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nyhYZlVSG7xMGUS1C9/giphy.gif" alt="Kawaii Character">
+            </div>
+
+            <div class="sparkles">✨ 💫 🌸 ✨</div>
+            
+            <p style="font-size: 1.25em; color: #555; max-width: 650px; margin: 0 auto; line-height: 1.8;">
+                Every single day talking to you and seeing your smile is a special memory I treasure. This page is my way of showing you how much you mean to me. ☺️
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Your Smile ☺️</h2>
+            <button class="reveal-btn" onclick="reveal(1)"><span>Click to See 💖</span></button>
+            <div id="content1" class="hidden-content">
+                <div class="kawaii-gif">
+                    <img src="https://media.giphy.com/media/KztT2c4u8mYYUiMKdJ/giphy.gif" alt="Happy Kawaii">
+                </div>
+                <p><strong>Your smile is my favorite thing in the entire universe!</strong></p>
+                <p>Every time you smile, my whole world lights up in ways I can't even fully explain. It doesn't matter if I'm having the worst day - seeing your smile makes everything better instantly, like magic. The way your face transforms, the genuine happiness that radiates from you, the warmth in your eyes - it all creates this incredible moment that I want to freeze in time forever. You have this incredible power to brighten everything around you just by being you, just by sharing that beautiful smile. That smile of yours? It's not just nice or pretty - it's pure magic, the kind that makes my heart skip beats and reminds me why every conversation with you is worth treasuring. ✨☺️</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>What Makes You Special 💫</h2>
+            <button class="reveal-btn" onclick="reveal(2)"><span>Discover More 💝</span></button>
+            <div id="content2" class="hidden-content">
+                <div class="reasons-grid">
+                    <div class="reason-item">Your stunning eyes - with glasses 🤓 or without, they're absolutely beautiful</div>
+                    <div class="reason-item">The genuine way you express your feelings - so real and honest</div>
+                    <div class="reason-item">That smile that makes my heart skip beats ☺️</div>
+                    <div class="reason-item">Every single conversation we share - they all mean the world to me</div>
+                    <div class="reason-item">How you appreciate sweet words and affection 💝</div>
+                    <div class="reason-item">Literally everything about you - you're amazing!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-section">
+            <h2>🚗 For the Autophile 🏎️</h2>
+            <div class="kawaii-gif">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDNjMzZlNzE4MGRjZWJkMGQ5NzI3MzQwMWY5YmFiYzI3MmNjMDVmMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6Zt6ML6BklcajjsA/giphy.gif" alt="Kawaii Car">
+            </div>
+            <p style="font-size: 1.3em; color: #0d47a1; margin-top: 25px; line-height: 1.8;">
+                I know you love cars - the roar of engines, the sleek designs, the thrill of speed. And just like a perfectly tuned sports car that turns heads wherever it goes, you captivate everyone around you effortlessly. You're the turbo boost to my day, the nitrous to my happiness, the premium fuel that keeps my heart racing! Every time I see your eyes light up talking about your favorite cars, I fall for you a little more. You're rarer than any limited edition, more stunning than any supercar, and worth more to me than any dream garage could ever be. 🏎️💨✨
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>A Funny Memory 😄</h2>
+            <button class="reveal-btn" onclick="reveal(3)"><span>Remember This? 😊</span></button>
+            <div id="content3" class="hidden-content">
+                <div class="kawaii-gif">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2U3ZWk4OGRtcHN3cGd3ZWJoY3ZsZDB1dGt5eGNkNGF2YjN6d2JnbiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/osjgQPWRx3cac/giphy.gif" alt="Shy Kawaii">
+                </div>
+                <p style="font-size: 1.3em;">Today, you said I look like Kim Jong Un! 🤣</p>
+                <p>And honestly? I don't even mind one bit because it makes you laugh. Your laughter is the most beautiful sound in the world - it's like music that plays on repeat in my mind, making even my toughest days brighter. The way your eyes crinkle when you laugh, the genuine joy in your voice, the way you light up the entire room... it's everything to me. You can tease me all you want, make all the jokes you can think of, compare me to anyone or anything - as long as it brings that gorgeous smile to your face and makes you happy, I'm the happiest person alive! Your joy is my joy, your laughter is my favorite melody. 😊💕</p>
+            </div>
+        </div>
+
+        <div class="quote-card">
+            "In a world of billions of people, you're the only one I want to talk to every single day."
+        </div>
+
+        <div class="promise-box">
+            <h2>My Promise to You 🤝💝</h2>
+            <p>
+                <strong>If no one else is there for you, I will be. Always.</strong>
+            </p>
+            <p style="margin-top: 25px;">
+                I want to be your safe place - the person you can always count on, the one who makes you smile when you're down, the one who's always ready to listen. Whether you need someone to talk to, someone to make you laugh, or just someone to be there in silence... I'm here. Today, tomorrow, and every single day after. You'll never have to face anything alone. 💝
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Every Single Day 📅</h2>
+            <button class="reveal-btn" onclick="reveal(4)"><span>See Why 💫</span></button>
+            <div id="content4" class="hidden-content">
+                <div class="kawaii-gif">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHRnbDdyM3BmZ2c5bTJuZ2w5YjRvZnZoMGlzMWU4dGJsYXdmaWJwdiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oz8xIsloV7zOmt81G/giphy.gif" alt="Love Kawaii">
+                </div>
+                <p style="font-size: 1.35em;"><strong>Every. Single. Day.</strong></p>
+                <p>That's how often I treasure our conversations and your smile. Not just sometimes, not just on good days - but every single day without fail. Each day with you is a memory I hold close to my heart, a precious moment I replay when I need something to smile about. Each conversation, no matter how small or simple, matters to me more than you might realize - whether we're talking about cars, sharing jokes, or just saying hello, every word from you is something I genuinely cherish. Each smile you share lights up my world like the sunrise breaking through darkness, warming everything it touches. You turn ordinary days into extraordinary memories just by being part of them. You make the mundane magical, the simple spectacular, and the everyday absolutely unforgettable. ☺️✨💫</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>What You Mean to Me 💝</h2>
+            <button class="reveal-btn" onclick="reveal(5)"><span>Open My Heart 💌</span></button>
+            <div id="content5" class="hidden-content">
+                <p style="font-size: 1.3em; line-height: 2; color: #333;">
+                    Priyanka, you're not just my friend - you're <strong>my favourite person</strong>. The one who makes me want to be better every day. The one whose happiness means everything to me. The one I think about and can't help but smile.
+                </p>
+                <p style="font-size: 1.3em; line-height: 2; color: #333; margin-top: 25px;">
+                    I know you sometimes get upset, and that's completely okay. Because I will keep making you smile, being there for you, supporting you, seeing you happy - that's more than enough for me. Your happiness is my happiness. 💝
+                </p>
+                <p style="font-size: 1.3em; line-height: 2; color: #333; margin-top: 25px;">
+                    You deserve all the love, support, and happiness in the world. And I want to be the person who gives you that, even if just as your friend, your safe place, your constant supporter.
+                </p>
+                <p style="font-size: 1.4em; line-height: 2; color: #764ba2; margin-top: 30px; font-weight: 600;">
+                    Thank you for being you, Priyanka. Thank you for your smile ☺️, your laughs 😄, your beautiful eyes 🤓, our conversations 💬, and for letting me be part of your life. You're incredible. ✨
+                </p>
+            </div>
+        </div>
+
+        <div class="sparkles">💫 ☺️ 💖 🌸 🤓 🚗 ✨ 💝</div>
+
+        <div class="final-message">
+            <h2>Always Here For You</h2>
+            <div class="kawaii-gif" style="width: 220px; height: 220px;">
+                <img src="https://media.giphy.com/media/M90mJvfWfd5mbUuULX/giphy.gif" alt="Kawaii Hearts">
+            </div>
+            <p style="font-size: 1.5em; color: #555; margin-top: 30px; font-weight: 500; line-height: 2;">
+                Your Safe Place 💝<br>
+                Your Supporter 🤝<br>
+                Your Friend 💫<br>
+                Always and Forever ✨
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function reveal(num) {
+            const content = document.getElementById('content' + num);
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+
+        const heartsContainer = document.getElementById('heartsContainer');
+        const heartEmojis = ['💕', '💖', '💗', '💝', '💘'];
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 4 + 10) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            heartsContainer.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 16000);
+        }
+
+        setInterval(createHeart, 1500);
+        
+        for(let i = 0; i < 6; i++) {
+            setTimeout(createHeart, i * 400);
+        }
+    </script>
+</body>
+</html>
